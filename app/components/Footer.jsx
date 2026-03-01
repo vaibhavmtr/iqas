@@ -11,29 +11,17 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-emerald-200 bg-emerald-50">
-      <div className="mx-auto max-w-6xl px-4 py-8 md:px-8 md:py-10">
-        <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between">
+    <footer className="border-t border-emerald-200 bg-emerald-50 safe-area-padding-x">
+      <div className="mx-auto max-w-6xl px-4 py-8 sm:py-10 md:px-8 md:py-12">
+        <div className="flex flex-col items-center gap-6 text-center md:flex-row md:justify-between md:text-left">
           <Link
             href="/"
-            className="text-lg font-bold text-emerald-800 transition-colors hover:text-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 rounded"
+            className="text-base font-bold text-emerald-800 transition-colors hover:text-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 rounded-md min-h-[44px] flex items-center justify-center md:justify-start sm:text-lg"
           >
             IQAS Agri
           </Link>
-          {/* <ul className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
-            {FOOTER_LINKS.map(({ href, label }) => (
-              <li key={href}>
-                <Link
-                  href={href}
-                  className="text-sm font-medium text-gray-700 transition-colors hover:text-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 rounded"
-                >
-                  {label}
-                </Link>
-              </li>
-            ))}
-          </ul> */}
         </div>
-        <p className="mt-6 text-center text-sm text-gray-600 md:mt-8 md:text-left">
+        <p className="mt-6 text-center text-sm text-gray-600 md:mt-8 md:text-left safe-area-padding-b">
           © {currentYear} IQAS Agri. All rights reserved.
         </p>
       </div>

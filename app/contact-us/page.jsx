@@ -5,7 +5,6 @@ import Link from 'next/link';
 import {
   FaPhone,
   FaEnvelope,
-  FaGlobe,
   FaMapMarkerAlt,
   FaWhatsapp,
   FaPaperPlane,
@@ -17,13 +16,11 @@ const CONTACT_INFO = {
   phoneDisplay: '08048058099',
   email: 'office@iqasagri.com',
   hours: 'Sun - Sat: 07:00 AM - 07:00 PM',
-  nextOpen: 'Opens Tomorrow at 07:00 AM',
   address: {
     line1: '3, Vinayaka Complex, Kalaskar Nagar, Panchavati, Nashik.(MH) - 422003',
     line2: 'Nashik, India, 422004',
   },
   whatsappNumber: '9022926922',
-  otherWebsiteUrl: '#',
   facebookUrl: 'https://www.facebook.com/profile.php?id=61567069587484',
 };
 
@@ -57,32 +54,32 @@ const ContactUsPage = () => {
 
   return (
     <main className="min-h-screen bg-slate-50">
-      {/* Hero — minimal */}
-      <section className="relative overflow-hidden bg-slate-900 px-4 py-16 md:py-20">
+      {/* Hero — mobile first */}
+      <section className="relative overflow-hidden bg-slate-900 px-4 py-12 sm:py-16 md:py-20 safe-area-padding-x">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-20%,rgba(16,185,129,0.25),transparent)]" aria-hidden />
         <div className="relative mx-auto max-w-6xl text-center">
-          <p className="text-sm font-medium uppercase tracking-widest text-emerald-400">
+          <p className="text-xs font-medium uppercase tracking-widest text-emerald-400 sm:text-sm">
             Contact
           </p>
-          <h1 className="mt-2 text-4xl font-bold tracking-tight text-white md:text-5xl">
+          <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
             Get in touch
           </h1>
-          <p className="mx-auto mt-3 max-w-xl text-slate-400">
+          <p className="mx-auto mt-2 max-w-xl text-sm text-slate-400 sm:mt-3 sm:text-base">
             We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as we can.
           </p>
         </div>
       </section>
 
-      {/* Content */}
-      <section className="relative -mt-8 px-4 pb-20 md:-mt-12 md:px-6">
+      {/* Content — mobile first: form first, then contact info */}
+      <section className="relative -mt-6 px-4 pb-12 sm:-mt-8 sm:px-5 md:-mt-12 md:px-6 md:pb-20 safe-area-padding-x">
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-8 lg:grid-cols-12 lg:gap-10">
             {/* Form card */}
             <div className="lg:col-span-7">
-              <div className="rounded-2xl bg-white p-6 shadow-xl shadow-slate-200/50 ring-1 ring-slate-200/60 md:p-10">
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid gap-6 sm:grid-cols-2">
-                    <div className="space-y-2">
+              <div className="rounded-2xl bg-white p-4 shadow-xl shadow-slate-200/50 ring-1 ring-slate-200/60 sm:p-6 md:p-10">
+                <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
+                  <div className="grid gap-5 sm:grid-cols-2 sm:gap-6">
+                    <div className="space-y-1.5 sm:space-y-2">
                       <label htmlFor="contact-name" className="text-sm font-medium text-slate-700">
                         Name
                       </label>
@@ -94,10 +91,10 @@ const ContactUsPage = () => {
                         onChange={handleChange}
                         required
                         placeholder="Your name"
-                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-slate-900 placeholder-slate-400 transition-colors focus:border-emerald-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+                        className="w-full min-h-[48px] rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-base text-slate-900 placeholder-slate-400 transition-colors focus:border-emerald-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
                       />
                     </div>
-                    <div className="space-y-2">
+                    <div className="space-y-1.5 sm:space-y-2">
                       <label htmlFor="contact-email" className="text-sm font-medium text-slate-700">
                         Email
                       </label>
@@ -109,12 +106,12 @@ const ContactUsPage = () => {
                         onChange={handleChange}
                         required
                         placeholder="you@example.com"
-                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-slate-900 placeholder-slate-400 transition-colors focus:border-emerald-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+                        className="w-full min-h-[48px] rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-base text-slate-900 placeholder-slate-400 transition-colors focus:border-emerald-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
                       />
                     </div>
                   </div>
-                  <div className="grid gap-6 sm:grid-cols-2">
-                    <div className="space-y-2">
+                  <div className="grid gap-5 sm:grid-cols-2 sm:gap-6">
+                    <div className="space-y-1.5 sm:space-y-2">
                       <label htmlFor="contact-mobile" className="text-sm font-medium text-slate-700">
                         Mobile No
                       </label>
@@ -126,10 +123,10 @@ const ContactUsPage = () => {
                         onChange={handleChange}
                         required
                         placeholder="10-digit number"
-                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-slate-900 placeholder-slate-400 transition-colors focus:border-emerald-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+                        className="w-full min-h-[48px] rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-base text-slate-900 placeholder-slate-400 transition-colors focus:border-emerald-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
                       />
                     </div>
-                    <div className="space-y-2">
+                    <div className="space-y-1.5 sm:space-y-2">
                       <label htmlFor="contact-subject" className="text-sm font-medium text-slate-700">
                         Subject
                       </label>
@@ -141,11 +138,11 @@ const ContactUsPage = () => {
                         onChange={handleChange}
                         required
                         placeholder="What is this about?"
-                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-slate-900 placeholder-slate-400 transition-colors focus:border-emerald-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+                        className="w-full min-h-[48px] rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-base text-slate-900 placeholder-slate-400 transition-colors focus:border-emerald-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
                       />
                     </div>
                   </div>
-                  <div className="space-y-2">
+                  <div className="space-y-1.5 sm:space-y-2">
                     <label htmlFor="contact-message" className="text-sm font-medium text-slate-700">
                       Message
                     </label>
@@ -157,7 +154,7 @@ const ContactUsPage = () => {
                       required
                       rows={5}
                       placeholder="Tell us how we can help..."
-                      className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-slate-900 placeholder-slate-400 transition-colors focus:border-emerald-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20 resize-y min-h-[120px]"
+                      className="w-full min-h-[120px] resize-y rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-base text-slate-900 placeholder-slate-400 transition-colors focus:border-emerald-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
                     />
                   </div>
                   {submitStatus === 'success' && (
@@ -169,7 +166,7 @@ const ContactUsPage = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="flex w-full items-center justify-center gap-2 rounded-xl bg-slate-900 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-slate-900/25 transition hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed sm:w-auto sm:min-w-[180px]"
+                    className="flex w-full min-h-[48px] items-center justify-center gap-2 rounded-xl bg-slate-900 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-slate-900/25 transition hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed active:scale-[0.98] sm:min-w-[180px] sm:w-auto"
                   >
                     {isSubmitting ? (
                       <span className="flex items-center gap-2">
@@ -187,9 +184,9 @@ const ContactUsPage = () => {
               </div>
             </div>
 
-            {/* Contact info */}
+            {/* Contact info — no sticky on mobile for better flow */}
             <div className="lg:col-span-5">
-              <div className="sticky top-24 space-y-4">
+              <div className="space-y-4 lg:sticky lg:top-24">
                 <div>
                   <h2 className="text-lg font-semibold text-slate-900">Contact information</h2>
                   <p className="mt-1 text-sm text-slate-500">
@@ -218,19 +215,13 @@ const ContactUsPage = () => {
                   secondary={CONTACT_INFO.address.line2}
                   isAddress
                 />
-                {/* <ContactItem
-                  icon={<FaGlobe className="h-5 w-5" aria-hidden />}
-                  label="Website"
-                  href={CONTACT_INFO.otherWebsiteUrl}
-                  primary="Other website"
-                  asLink
-                /> */}
-                <div className="flex flex-col gap-2 pt-2 sm:flex-row sm:gap-4">
+
+                <div className="grid grid-cols-1 gap-3 pt-2 sm:grid-cols-2 sm:gap-4">
                   <a
                     href={`https://wa.me/${CONTACT_INFO.whatsappNumber}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white p-4 shadow-sm ring-1 ring-slate-200/60 transition hover:border-emerald-300 hover:bg-emerald-50/50 hover:ring-emerald-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="flex min-h-[72px] items-center gap-3 rounded-xl border border-slate-200 bg-white p-4 shadow-sm ring-1 ring-slate-200/60 transition hover:border-emerald-300 hover:bg-emerald-50/50 hover:ring-emerald-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 active:scale-[0.98]"
                   >
                     <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-500 text-white">
                       <FaWhatsapp className="h-6 w-6" aria-hidden />
@@ -244,7 +235,7 @@ const ContactUsPage = () => {
                     href={CONTACT_INFO.facebookUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white p-4 shadow-sm ring-1 ring-slate-200/60 transition hover:border-blue-400 hover:bg-blue-50/50 hover:ring-blue-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="flex min-h-[72px] items-center gap-3 rounded-xl border border-slate-200 bg-white p-4 shadow-sm ring-1 ring-slate-200/60 transition hover:border-blue-400 hover:bg-blue-50/50 hover:ring-blue-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 active:scale-[0.98]"
                   >
                     <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#1877F2] text-white">
                       <FaFacebookF className="h-6 w-6" aria-hidden />
@@ -274,7 +265,7 @@ function ContactItem({
   asLink,
 }) {
   const content = (
-    <div className="flex gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm ring-1 ring-slate-200/60 transition hover:border-slate-300 hover:shadow-md focus-within:ring-2 focus-within:ring-emerald-500/50">
+    <div className="flex gap-3 rounded-xl border border-slate-200 bg-white p-4 shadow-sm ring-1 ring-slate-200/60 transition hover:border-slate-300 hover:shadow-md focus-within:ring-2 focus-within:ring-emerald-500/50 sm:gap-4">
       <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-slate-100 text-slate-600">
         {icon}
       </span>
@@ -283,22 +274,22 @@ function ContactItem({
         {href && !asLink ? (
           <a
             href={href}
-            className="mt-0.5 block font-medium text-slate-900 hover:text-emerald-600 focus:outline-none"
+            className="mt-0.5 block font-medium text-slate-900 hover:text-emerald-600 focus:outline-none wrap-break-word"
           >
             {primary}
           </a>
         ) : asLink && href ? (
           <Link
             href={href}
-            className="mt-0.5 block font-medium text-slate-900 hover:text-emerald-600 focus:outline-none"
+            className="mt-0.5 block font-medium text-slate-900 hover:text-emerald-600 focus:outline-none wrap-break-word"
           >
             {primary}
           </Link>
         ) : (
-          <p className="mt-0.5 font-medium text-slate-900">{primary}</p>
+          <p className="mt-0.5 font-medium text-slate-900 wrap-break-word">{primary}</p>
         )}
         {secondary && (
-          <p className="mt-0.5 text-sm text-slate-500">{secondary}</p>
+          <p className="mt-0.5 text-sm text-slate-500 wrap-break-word">{secondary}</p>
         )}
       </div>
     </div>
