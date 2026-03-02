@@ -4,6 +4,8 @@ export interface Product {
   imagePath: string;
   description: string;
   keyFeatures: string[];
+  /** Price in INR (₹) for cart and Razorpay */
+  price: number;
   keywords?: string;
   usageApplication?: string;
   packagingSize?: string;
@@ -18,6 +20,7 @@ export const PRODUCTS: Product[] = [
     name: 'Biofin Super',
     imagePath: '/assets/images/biofin-super.avif',
     description: 'Biological Insecticide multiplier',
+    price: 499,
     keyFeatures: [
       'Bio-Tech Grade Plant Growth Regulator',
       'Target Crops: Wheat, Fruit And Vegetables',
@@ -36,6 +39,7 @@ export const PRODUCTS: Product[] = [
     id: 'fungcont',
     name: 'Fungcont',
     imagePath: '/assets/images/fungcont.avif',
+    price: 599,
     description:
       'For Biological Fungus Management — Downy Mildew, Blight, Powdery Mildew etc are among the main fungus found in all crops. Fungcont is a biological fungicide proving to be very effective in IPM.',
     keyFeatures: [
@@ -55,6 +59,7 @@ export const PRODUCTS: Product[] = [
     id: 'iqasang',
     name: 'Iqasang',
     imagePath: '/assets/images/iqasang.avif',
+    price: 450,
     description:
       'आता पिक येईल अधिक जोमदार, जर जोडीला असेल इकासान दाणेदार..!"',
     keyFeatures: [
@@ -76,6 +81,7 @@ export const PRODUCTS: Product[] = [
     id: 'iqmax',
     name: 'Iqmax',
     imagePath: '/assets/images/iqmax.avif',
+    price: 699,
     description:
       'IQ-Max (New Generation KELP) — An extraction from marine seaweed and chelated microelements containing bioactive ingredients: alginic acid, betaine, mannitol, iodine, alginic polyphenol, Cytokinin, Gibberellins, Auxins, Organic Matters, Vitamins etc. Various field tests, crop cycle tests and research prove the effectiveness of KELP.',
     keyFeatures: [
@@ -94,6 +100,7 @@ export const PRODUCTS: Product[] = [
     id: 'nanobunch',
     name: 'Nanobunch',
     imagePath: '/assets/images/nanobunch.avif',
+    price: 799,
     description:
       'Nano Bunch — One drop magic. A South Korean technology product. 1 ml Nanobunch + 1 kg per 200 liters of water. Rate: 1 ml per acre / 200 lit water.',
     keyFeatures: [
@@ -110,6 +117,7 @@ export const PRODUCTS: Product[] = [
     id: 'pentasan',
     name: 'Pentasan',
     imagePath: '/assets/images/pentasan.avif',
+    price: 549,
     description: 'An Organic Plant Extract. Bio-Tech Grade Plant Growth Regulator.',
     keyFeatures: [
       'Bio-Tech Grade Plant Growth Regulator',
@@ -129,6 +137,7 @@ export const PRODUCTS: Product[] = [
     id: 'soil-iqasan',
     name: 'Soil Iqasan',
     imagePath: '/assets/images/soil-iqasan.avif',
+    price: 899,
     description:
       'SOIL IQASAN — Soil structure stabilizer and water retention. Liquid Bio-Tech Grade 5 Litre Soil Iqasan Conditioner.',
     keyFeatures: [
@@ -150,6 +159,7 @@ export const PRODUCTS: Product[] = [
     id: 'stresbid',
     name: 'Stresbid',
     imagePath: '/assets/images/stresbid.avif',
+    price: 649,
     description:
       'IQAS Antistress Formula — Stresbid. A certified organic NanoAgotech based plant growth promoter with a unique mode of action.',
     keyFeatures: [

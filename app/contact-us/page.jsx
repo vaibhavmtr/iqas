@@ -10,6 +10,7 @@ import {
   FaPaperPlane,
   FaFacebookF,
 } from 'react-icons/fa';
+import { WHATSAPP_NUMBER } from '../constants/contact';
 
 const CONTACT_INFO = {
   phone: '08048058099',
@@ -20,7 +21,6 @@ const CONTACT_INFO = {
     line1: '3, Vinayaka Complex, Kalaskar Nagar, Panchavati, Nashik.(MH) - 422003',
     line2: 'Nashik, India, 422004',
   },
-  whatsappNumber: '9022926922',
   facebookUrl: 'https://www.facebook.com/profile.php?id=61567069587484',
 };
 
@@ -64,7 +64,7 @@ const ContactUsPage = () => {
           <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
             Get in touch
           </h1>
-          <p className="mx-auto mt-2 max-w-xl text-sm text-slate-400 sm:mt-3 sm:text-base">
+          <p className="mx-auto mt-2 max-w-xl text-sm text-slate-50 sm:mt-3 sm:text-base">
             We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as we can.
           </p>
         </div>
@@ -187,12 +187,12 @@ const ContactUsPage = () => {
             {/* Contact info — no sticky on mobile for better flow */}
             <div className="lg:col-span-5">
               <div className="space-y-4 lg:sticky lg:top-24">
-                <div>
+                {/* <div>
                   <h2 className="text-lg font-semibold text-slate-900">Contact information</h2>
-                  <p className="mt-1 text-sm text-slate-500">
+                  <p className="text-white">
                     Reach us by phone, email or visit our office.
                   </p>
-                </div>
+                </div> */}
 
                 <ContactItem
                   icon={<FaPhone className="h-5 w-5" aria-hidden />}
@@ -218,7 +218,7 @@ const ContactUsPage = () => {
 
                 <div className="grid grid-cols-1 gap-3 pt-2 sm:grid-cols-2 sm:gap-4">
                   <a
-                    href={`https://wa.me/${CONTACT_INFO.whatsappNumber}`}
+                    href={`https://wa.me/${WHATSAPP_NUMBER}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex min-h-[72px] items-center gap-3 rounded-xl border border-slate-200 bg-white p-4 shadow-sm ring-1 ring-slate-200/60 transition hover:border-emerald-300 hover:bg-emerald-50/50 hover:ring-emerald-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 active:scale-[0.98]"
