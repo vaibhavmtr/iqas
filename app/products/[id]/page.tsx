@@ -8,6 +8,7 @@ import {
   getSimilarProducts,
 } from '@/app/data/products';
 import { SimilarProductsSlider } from '@/app/components/SimilarProductsSlider';
+import { AddToCartButton } from '@/app/components/AddToCartButton';
 
 interface ProductPageProps {
   params: Promise<{ id: string }>;
@@ -163,10 +164,17 @@ export default async function ProductPage({ params }: ProductPageProps) {
               </p>
             )}
 
-            <div className="mt-8">
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <AddToCartButton product={product} />
+              <Link
+                href="/cart"
+                className="inline-flex min-h-[48px] items-center justify-center rounded-xl border-2 border-emerald-700 px-6 py-3.5 text-base font-semibold text-emerald-700 shadow-sm transition-colors hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 active:scale-[0.98]"
+              >
+                View cart
+              </Link>
               <Link
                 href="/contact-us"
-                className="inline-flex rounded-lg bg-emerald-700 px-6 py-3 text-base font-semibold text-white shadow-sm transition-colors hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+                className="inline-flex min-h-[48px] items-center justify-center rounded-xl border-2 border-emerald-700 px-6 py-3.5 text-base font-semibold text-emerald-700 shadow-sm transition-colors hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 active:scale-[0.98]"
               >
                 Enquire about {product.name}
               </Link>

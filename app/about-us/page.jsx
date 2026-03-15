@@ -28,7 +28,43 @@ const AboutUsPage = () => {
           </div>
         </div>
 
-        {/* Highlight card */}
+        {/* About Company */}
+        <div className="mt-8 sm:mt-12 md:mt-16">
+          <h2 className="text-xl font-semibold text-emerald-800 sm:text-2xl mb-4 sm:mb-5">
+            About Company
+          </h2>
+          <p className="text-lg font-medium text-gray-800 mb-4 sm:mb-5">
+            The Best Manufacturers Of Bio-organics Agri Inputs
+          </p>
+          <div className="space-y-4 text-gray-700 leading-relaxed text-[15px] sm:text-base">
+            <p>
+              We at <strong className="text-emerald-800">IQAS Integrated Quick Agri Solutions Pvt. Ltd.</strong> are a fast-scaling agri-inputs company based in Nashik, Maharashtra. Since our inception in 2017, we&apos;ve experienced an average year-over-year growth of 75%, driven by our commitment to delivering innovative and sustainable crop-input solutions to farmers across India.
+            </p>
+            <p>
+              IQAS manufactures and supplies a comprehensive range of high-impact agricultural products, including:
+            </p>
+            <ul className="list-disc pl-6 space-y-2 text-gray-700">
+              <li>Soil structure stabilizers and water retention enhancers</li>
+              <li>Fish oil-based formulations</li>
+              <li>Nano-fertilizers, biopesticides, and biostimulants</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Series B+ focus card */}
+        <div className="mt-8 rounded-xl border border-emerald-100 bg-emerald-50 p-4 sm:mt-12 sm:p-6 md:mt-16 md:p-8">
+          <h2 className="text-lg font-semibold text-emerald-800 sm:text-xl mb-3 sm:mb-4">
+            As we prepare to raise our Series B+ round, our focus is on:
+          </h2>
+          <ul className="list-disc pl-6 space-y-2 text-gray-700 leading-relaxed text-[15px] sm:text-base">
+            <li>Scaling manufacturing and distribution capacity across underserved regions</li>
+            <li>Expanding our leadership team across R&D, sales, and operations</li>
+            <li>Investing in tech-integrated advisory platforms for better farmer engagement</li>
+            <li>Accessing global markets and improving farmer unit economics</li>
+          </ul>
+        </div>
+
+        {/* Mission highlight card */}
         <div className="mt-8 rounded-xl border border-emerald-100 bg-emerald-50 p-4 sm:mt-12 sm:p-6 md:mt-16 md:p-8">
           <h2 className="text-lg font-semibold text-emerald-800 sm:text-xl mb-3 sm:mb-4">
             Our Mission
